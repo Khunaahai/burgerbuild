@@ -1,0 +1,49 @@
+.delivery-page {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background: #fdfdfd;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+.delivery-page h1 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.delivery-page p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #555;
+}
+
+.OrderButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: #22c55e;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+.OrderButton .total-price {
+  opacity: 0.95;
+  font-weight: 600;
+}
+.OrderButton:hover {
+  background: #16a34a;
+}
+.OrderButton:active {
+  background: #15803d;
+}
+.OrderButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+} 

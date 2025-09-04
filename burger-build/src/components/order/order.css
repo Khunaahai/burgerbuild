@@ -1,0 +1,156 @@
+/* ---------- Theme tokens ---------- */
+:root {
+  --bg: #ffffff;
+  --card: #f9fafb;
+  --text: #111827;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+
+  --green: #22c55e;   /* Confirm */
+  --red: #ef4444;     /* Cancel */
+  --slate: #374151;   /* Back */
+  --indigo: #6366f1;  /* Delivery */
+}
+
+/* ---------- Card ---------- */
+.order-summary {
+  max-width: 640px;
+  margin: 20px auto;
+  padding: 20px 22px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  color: var(--text);
+}
+
+.order-summary h2 {
+  margin: 0 0 12px;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+/* ---------- Items ---------- */
+.order-summary ul {
+  list-style: none;
+  margin: 0 0 10px;
+  padding: 0;
+  background: var(--card);
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+}
+
+.order-summary li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  font-size: 15px;
+  border-bottom: 1px dashed var(--border);
+}
+
+.order-summary li:last-child {
+  border-bottom: 0;
+}
+
+/* ---------- Total line ---------- */
+.order-summary p {
+  margin: 12px 0 16px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* ---------- Buttons (base) ---------- */
+.order-summary button {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .06s ease, box-shadow .16s ease, background .16s ease, color .16s ease, border-color .16s ease;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+  margin: 6px 8px 0 0; /* мөр хооронд зай */
+}
+
+.order-summary button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.order-summary button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.order-summary button:focus-visible {
+  outline: 3px solid rgba(99, 102, 241, 0.35); /* indigo focus ring */
+  outline-offset: 2px;
+}
+
+/* ---------- Variants ---------- */
+.confirm-button {
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
+}
+
+.confirm-button:hover {
+  filter: brightness(0.98);
+}
+
+.cancel-button {
+  background: #fff;
+  color: var(--red);
+  border-color: var(--red);
+}
+
+.cancel-button:hover {
+  background: rgba(239, 68, 68, 0.06);
+}
+
+.back-button {
+  background: #fff;
+  color: var(--slate);
+  border-color: var(--slate);
+}
+
+.back-button:hover {
+  background: rgba(55, 65, 81, 0.06);
+}
+
+.delivery-button {
+  background: var(--indigo);
+  border-color: var(--indigo);
+  color: #fff;
+}
+
+.delivery-button:hover {
+  filter: brightness(0.98);
+}
+
+/* ---------- Disabled state (хэрэглэх бол) ---------- */
+.order-summary button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 480px) {
+  .order-summary {
+    padding: 16px;
+  }
+  .order-summary li {
+    padding: 8px 10px;
+  }
+  .order-summary button {
+    width: 100%;
+    margin: 8px 0 0;
+  }
+}

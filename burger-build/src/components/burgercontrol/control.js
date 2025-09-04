@@ -1,42 +1,38 @@
 import React, { useState } from "react";
 import './control.css';
 
-function BurgerControl() {
-  const [ingredients, setIngredients] = useState({
-    meat: 0, tomato: 0, salad: 0, cheese: 0,
-  });
 
-  const add = (t) => setIngredients(p => ({ ...p, [t]: p[t] + 1 }));
-  const remove = (t) => setIngredients(p => ({ ...p, [t]: Math.max(0, p[t]-1) }));
+function BurgerControl(props) {
 
   return (
-    <div className="BurgerControls">
-      <div className="BurgerControl">
-        <span className="Label">Meat: {ingredients.meat}</span>
-        <button className="More" onClick={() => add('meat')}>Add</button>
-        <button className="Less" onClick={() => remove('meat')} disabled={!ingredients.meat}>Remove</button>
+    <div className="control">
+      <h2>Add Ingredients</h2>
+      <div className="controls">
+        <div className="control-item">
+          <span>Meat: {props.meat}</span>
+          <button onClick={props.addmeat}>Add</button>
+          <button onClick={props.removemeat} disabled={props.meat === 0}>Remove</button>
+        </div>
+        <div className="control-item">
+          <span>Cheese: {props.cheese}</span>
+          <button onClick={props.addcheese}>Add</button>
+          <button onClick={props.removecheese} disabled={props.cheese === 0}>Remove</button>
+        </div>
+        <div className="control-item">
+          <span>Salad: {props.salad}</span>
+          <button onClick={props.addsalad}>Add</button>
+          <button onClick={props.removesalad} disabled={props.salad === 0}>Remove</button>
+        </div>
+        <div className="control-item">
+          <span>Tomato: {props.tomato}</span>
+          <button onClick={props.addtomato}>Add</button>
+          <button onClick={props.removetomato} disabled={props.tomato === 0}>Remove</button>
+        </div>
       </div>
-
-      <div className="BurgerControl">
-        <span className="Label">Tomato: {ingredients.tomato}</span>
-        <button className="More" onClick={() => add('tomato')}>Add</button>
-        <button className="Less" onClick={() => remove('tomato')} disabled={!ingredients.tomato}>Remove</button>
-      </div>
-
-      <div className="BurgerControl">
-        <span className="Label">Cheese: {ingredients.cheese}</span>
-        <button className="More" onClick={() => add('cheese')}>Add</button>
-        <button className="Less" onClick={() => remove('cheese')} disabled={!ingredients.cheese}>Remove</button>
-      </div>
-
-      <div className="BurgerControl">
-        <span className="Label">Salad: {ingredients.salad}</span>
-        <button className="More" onClick={() => add('salad')}>Add</button>
-        <button className="Less" onClick={() => remove('salad')} disabled={!ingredients.salad}>Remove</button>
-      </div>
-
-      <button className="OrderButton">Order</button>
     </div>
   );
 }
+
+
+
 export default BurgerControl;
