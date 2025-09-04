@@ -1,0 +1,33 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f6f7fb;           
+}
+
+
+.App main {
+  max-width: 960px;               
+  margin: 0 auto;                 
+  padding: 24px 16px;             
+}
+
+
+.App main section {
+  margin: 24px 0;
+}
+
+
+.App-header { background-color: #282c34; min-height: 10vh; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: calc(10px + 2vmin); color: white; }
+
+
+@media (max-width: 480px) {
+  .App main { padding: 16px 12px; }
+}

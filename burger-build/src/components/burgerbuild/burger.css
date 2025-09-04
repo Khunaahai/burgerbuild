@@ -1,0 +1,153 @@
+:root {
+  --bun-top: #f5d398;
+  --bun-bottom: #e0a96d;
+  --bun-shadow: #c68642;
+  --seed: #fffbe6;
+  --lettuce: #7ec850;
+  --lettuce-shadow: #5fa03a;
+  --tomato: #e94b35;
+  --tomato-shadow: #b92d1f;
+  --cheese: #ffe066;
+  --cheese-shadow: #e6c200;
+  --meat: #7b3f00;
+  --meat-shadow: #4e260e;
+}
+
+.burger {
+  max-width: 20rem;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0.5rem 2rem rgba(80, 50, 20, 0.15);
+  padding: 2rem 1rem;
+  background: #fff;
+  border-radius: 1.5rem;
+}
+
+.bun-top {
+  width: 14rem;
+  height: 5rem;
+  background: linear-gradient(180deg, var(--bun-top) 70%, var(--bun-shadow) 100%);
+  border-radius: 7rem 7rem 4rem 4rem / 5rem 5rem 2rem 2rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 0.2rem 1rem rgba(200, 150, 80, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.seeds1, .seeds2, .seeds3 {
+  position: absolute;
+  width: 0.7rem;
+  height: 0.3rem;
+  background: var(--seed);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  box-shadow: 0 0.05rem 0.2rem rgba(200,180,100,0.15);
+}
+
+.seeds1 {
+  top: 1.2rem;
+  left: 4rem;
+  transform: rotate(-15deg);
+}
+.seeds2 {
+  top: 0.8rem;
+  left: 6.5rem;
+  transform: rotate(10deg);
+}
+.seeds3 {
+  top: 1.5rem;
+  left: 9rem;
+  transform: rotate(-8deg);
+}
+
+.salad {
+  width: 13rem;
+  height: 1.2rem;
+  background: linear-gradient(90deg, var(--lettuce), var(--lettuce-shadow));
+  border-radius: 1.5rem 1.5rem 1rem 1rem / 1.2rem 1.2rem 1rem 1rem;
+  margin-bottom: 0.3rem;
+  box-shadow: 0 0.1rem 0.3rem rgba(80, 200, 80, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.tomato {
+  width: 12.5rem;
+  height: 1.1rem;
+  background: linear-gradient(90deg, var(--tomato), var(--tomato-shadow));
+  border-radius: 1.2rem 1.2rem 1rem 1rem / 1.1rem 1.1rem 1rem 1rem;
+  margin-bottom: 0.3rem;
+  box-shadow: 0 0.1rem 0.3rem rgba(200, 50, 50, 0.13);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.cheese {
+  width: 12rem;
+  height: 0.8rem;
+  background: linear-gradient(90deg, var(--cheese), var(--cheese-shadow));
+  border-radius: 0.7rem 0.7rem 0.5rem 0.5rem / 0.8rem 0.8rem 0.5rem 0.5rem;
+  margin-bottom: 0.3rem;
+  box-shadow: 0 0.1rem 0.2rem rgba(220, 200, 50, 0.13);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b38b00;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.meat {
+  width: 11.5rem;
+  height: 1.2rem;
+  background: linear-gradient(90deg, var(--meat), var(--meat-shadow));
+  border-radius: 1.2rem 1.2rem 1rem 1rem / 1.2rem 1.2rem 1rem 1rem;
+  margin-bottom: 0.4rem;
+  box-shadow: 0 0.1rem 0.3rem rgba(120, 60, 20, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.bun-bottom {
+  width: 13rem;
+  height: 2.5rem;
+  background: linear-gradient(180deg, var(--bun-bottom) 60%, var(--bun-shadow) 100%);
+  border-radius: 0 0 7rem 7rem / 0 0 2.5rem 2.5rem;
+  margin-top: 0.2rem;
+  box-shadow: 0 0.2rem 1rem rgba(200, 150, 80, 0.18);
+}
+
+@media (max-width: 400px) {
+  .burger,
+  .bun-top,
+  .lettuce,
+  .tomato,
+  .cheese,
+  .meat,
+  .bun-bottom {
+    width: 100% !important;
+    max-width: 100vw;
+  }
+  .burger {
+    padding: 1rem 0.2rem;
+  }
+}
